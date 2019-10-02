@@ -1,5 +1,6 @@
 # React Starter
-Description
+
+## Description
 React starter project serving as a base for the best UI development possible!
 
 ## How to use
