@@ -2,8 +2,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
-  devtool: "sourcemaps",
+  entry: "./src/index.tsx",
+  devtool: "source-map",
   cache: true,
   mode: "development",
   output: {
@@ -13,9 +13,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        use: ['ts-loader']
       },
       {
         test: /\.css$/,
@@ -26,6 +26,9 @@ module.exports = {
         use: ["file-loader"]
       }
     ]
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.css', '.js']
   },
   devServer: {
     historyApiFallback: true

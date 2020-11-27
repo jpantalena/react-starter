@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "allowJs": true,
+    "jsx": "react",
+    "rootDir": "./",
+    "strict": true,
+    "baseUrl": "node_modules",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}
