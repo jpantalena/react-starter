@@ -4,7 +4,7 @@ import './index.css';
 
 const App = () => (
   <div className="app-container">
-    <h1>React Starter</h1>
+    <h1>new-project</h1>
   </div>
 );
 
