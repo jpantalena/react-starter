@@ -13,4 +13,7 @@ sed -i "" "s/new-project/$name/g" src/public/index.html
 # Update src/components/App/index.tsx
 sed -i "" "s/new-project/$name/g" src/components/App/index.tsx
 
+# Remove react-starter .git
+rm -rf .git
+
 echo "Finished setup."
