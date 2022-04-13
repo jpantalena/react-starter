@@ -1,8 +1,22 @@
 #!/bin/bash
 
-read -p "Enter project name: " name
+echo "============================"
+echo "Starting react-starter setup"
+echo "============================"
+echo ""
 
-read -p "Confirm? $name (y/n): " confirm && [[ $confirm == [yY] ]] || exit 1
+name=${PWD##*/}
+
+read -p "Use $name as project name? (y/n): " name_confirm
+
+if [[ $name_confirm == [yY] ]]
+then
+  echo "$name confirmed."
+else
+  echo ""
+  read -p "Enter project name: " name
+  read -p "Confirm? $name (y/n): " confirm && [[ $confirm == [yY] ]] || exit 1
+fi
 
 # Update package.json
 sed -i "" "s/new-project/$name/g" package.json
